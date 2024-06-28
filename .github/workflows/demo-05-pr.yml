@@ -57,3 +57,10 @@ jobs:
         if-no-files-found: error
         # Duration after which artifact will expire in days. 0 means using default retention.
         retention-days: 90
+        
+    - name: output to summary
+      run: |
+        echo "<details><summary>Summary</summary>" >> $GITHUB_STEP_SUMMARY
+        echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "</details>" >> $GITHUB_STEP_SUMMARY
